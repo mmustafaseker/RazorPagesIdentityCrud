@@ -1,0 +1,11 @@
+﻿@page
+@model RazorCrude.Pages.Urunler.YeniModel
+
+<h1>Ekle</h1>
+<form class="form" method="post">
+    <input asp-for="Urun.UrunAd" class="form-control mb-2" placeholder="Ürün adı giriniz"/>
+    <span asp-validation-for="Urun.UrunAd"></span>
+    <input asp-for="Urun.BirimFiyat"  min="0" step=".1" class="form-control mb-2" placeholder="Birim fiyat giriniz"/>
+    <span asp-validation-for="Urun.BirimFiyat"></span>
+    <button class="btn btn-success" >Ekle</button>
+</form>

@@ -1,0 +1,13 @@
+﻿@page
+@model RazorCrude.Pages.Urunler.DuzenleModel
+@{
+}
+<h1>Düzenle - @Model.Urun.Id</h1>
+<form class="form" method="post">
+    <input type="hidden" asp-for="Urun.Id" />
+    <input asp-for="Urun.UrunAd" class="form-control mb-2" placeholder="Ürün adı giriniz" />
+    <span asp-validation-for="Urun.UrunAd"></span>
+    <input asp-for="Urun.BirimFiyat" min="0" step=".1" class="form-control mb-2" placeholder="Birim fiyat giriniz" />
+    <span asp-validation-for="Urun.BirimFiyat"></span>
+    <button class="btn btn-success">Düzenle</button>
+</form>
